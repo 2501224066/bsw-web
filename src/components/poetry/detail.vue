@@ -24,7 +24,7 @@
         <span class="word" v-for="(item, i) in detail.content" :key="i" v-on:click="word">
           <span v-if="item == '。'">
             {{ item }}
-            <br />
+            <br/>
           </span>
           <span v-else>{{ item }}</span>
         </span>
@@ -44,7 +44,7 @@
             >{{ item }}</span>
           </div>
         </div>
-        <br />
+        <br/>
         <div class="float">
           <div class="left">
             <span class="label">注释</span>
@@ -65,47 +65,50 @@
 </template>
 
 <script>
-import Axios from "axios";
-export default {
-  name: "poetryDetail",
-  data() {
-    return {
-      detail: []
-    };
-  },
-  created: function() {
-    var api =
-      "http://127.0.0.1:9093/api/poetry/detail/" + this.$route.params.id;
-    Axios.get(api)
-      .then(res => {
-        var r = res.data;
-        if (r.code == 100000) {
-          this.detail = r.data.detail;
-        } else {
-          alert(res.data.message);
-        }
-      })
-      .catch(error => {
-        console.log("Error", error.message);
-      });
-  },
-  methods: {
-    word(e) {
-      this.$router.push({ path: "/word/detail/" + e.currentTarget.innerText });
+  import Axios from "axios";
+
+  export default {
+    name: "poetryDetail",
+    data() {
+      return {
+        api: process.env.VUE_APP_BASE_API + "/poetry/detail/",
+        detail: []
+      };
+    },
+    created: function () {
+      var api = this.api + this.$route.params.id;
+      Axios.get(api)
+        .then(res => {
+          var r = res.data;
+          if (r.code == 100000) {
+            this.detail = r.data.detail;
+          } else {
+            alert(res.data.message);
+          }
+        })
+        .catch(error => {
+          console.log("Error", error.message);
+        });
+    },
+    methods: {
+      word(e) {
+        this.$router.push({path: "/word/detail/" + e.currentTarget.innerText});
+      }
     }
-  }
-};
+  };
 </script>
 
 <style scoped>
-.peotry {
-  margin-top: 10rem;
-}
-.remark {
-  margin-top: 10rem;
-  font-size: 1rem;
-}
-.word:hover {
-  color: #8a63ad;
-}
+  .peotry {
+    margin-top: 10rem;
+  }
+
+  .remark {
+    margin-top: 10rem;
+    font-size: 1rem;
+  }
+
+  .word:hover {
+    color: #8a63ad;
+  }
 </style>

@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import PoetryList from '@/components/PoetryList'
-import CiList from '@/components/CiList'
-import IdiomList from '@/components/IdiomList'
-import XiehouyuList from '@/components/XiehouyuList'
-import PoetryDetail from '@/components/PoetryDetail'
-import CiDetail from '@/components/CiDetail'
-import IdiomDetail from '@/components/IdiomDetail'
-import WordDetail from '@/components/WordDetail'
+import Home from '@/components/home'
+import PoetryList from '@/components/poetry/list'
+import CiList from '@/components/ci/list'
+import IdiomList from '@/components/idiom/list'
+import XiehouyuList from '@/components/xiehouyu/list'
+import PoetryDetail from '@/components/poetry/detail'
+import CiDetail from '@/components/ci/detail'
+import IdiomDetail from '@/components/idiom/detail'
+import WordDetail from '@/components/word/detail'
 
 Vue.use(Router)
 
