@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "kr";
+  src: url("kr.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fzjlc";
+  src: url("fzjlc.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fzjlx";
+  src: url("fzjlx.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
