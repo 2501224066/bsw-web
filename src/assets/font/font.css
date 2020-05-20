@@ -1,18 +1,18 @@
 @font-face {
   font-family: "kr";
-  src: url("kr.otf");
+  src: url("http://qiniu.unclear.top/kr.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "fzjlc";
-  src: url("fzjlc.ttf");
+  src: url("http://qiniu.unclear.top/fzjlc.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "fzjlx";
-  src: url("fzjlx.ttf");
+  src: url("http://qiniu.unclear.top/fzjlx.ttf");
   font-weight: normal;
   font-style: normal;
 }
